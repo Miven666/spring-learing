@@ -1,4 +1,4 @@
-package spring.learing.spring4.core;
+package com.miven.spring4.core;
 
 import com.miven.entity.Student;
 import org.springframework.core.ResolvableType;
@@ -17,7 +17,7 @@ import java.util.HashMap;
  */
 public class ResolvableTypeSample {
 
-    public HashMap<String, Student> hashMap;
+    private HashMap<String, Student> hashMap;
 
     public ResolvableTypeSample() {
         HashMap<String, Student> hashMap = new HashMap<>(16);
@@ -26,7 +26,7 @@ public class ResolvableTypeSample {
     }
 
     public static void main(String[] args) throws NoSuchFieldException {
-        ResolvableType resolvableType = ResolvableType.forField(ResolvableTypeSample.class.getField("hashMap"));
+        ResolvableType resolvableType = ResolvableType.forField(ResolvableTypeSample.class.getDeclaredField("hashMap"));
         Type type = resolvableType.getType();
         System.out.println("type name: " + type.getTypeName());
 

@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.miven.spring</groupId>
-    <artifactId>spring-learing</artifactId>
+    <artifactId>spring-learning</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>spring-5.0.x-learing</module>
-        <module>spring-4.0.x-learing</module>
+        <module>spring-5.0.x-learning</module>
+        <module>spring-4.0.x-learning</module>
     </modules>
 
     <properties>
