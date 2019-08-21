@@ -11,6 +11,7 @@
     <modules>
         <module>spring-5.0.x-learning</module>
         <module>spring-4.0.x-learning</module>
+      <module>spring-3.0.x-learning</module>
     </modules>
 
     <properties>
