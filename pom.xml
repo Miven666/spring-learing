@@ -13,6 +13,8 @@
 		<module>spring-5.0.x-learning</module>
 		<module>spring-4.0.x-learning</module>
 		<module>spring-3.0.x-learning</module>
+		<module>spring-2.0.x-learning</module>
+		<module>spring-1.0.x-learning</module>
 	</modules>
 
 	<properties>
