@@ -17,3 +17,9 @@
         + MethodInvocation (调用方法)
         + FieldAccess (访问字段)
         + ConstructorInvocation (调用构造)
+        
+- Pointcut (切点，一组符合某种共性的 Joinpoint) 
+    + Joinpoint AB
+    + Joinpoint AC
+    + Joinpoint AD
+ 
