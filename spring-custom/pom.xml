@@ -9,11 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-1.0.x-learning</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>spring-custom</artifactId>
 
-    <properties>
-        <spring.version>1.0</spring.version>
-    </properties>
 
 </project>

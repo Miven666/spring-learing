@@ -1,4 +1,4 @@
-package com.miven.spring.context;
+package com.miven.spring.custom.annotation;
 
 import java.lang.annotation.*;
 

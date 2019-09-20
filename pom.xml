@@ -15,6 +15,8 @@
 		<module>spring-3.0.x-learning</module>
 		<module>spring-2.0.x-learning</module>
 		<module>spring-1.0.x-learning</module>
+        <module>spring-custom</module>
+		<module>spring-3.1.x-learning</module>
 	</modules>
 
 	<properties>
@@ -22,12 +24,34 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<miven.java.version>1.0</miven.java.version>
+
+		<cglib.version>3.3.0</cglib.version>
+		<spring.version>5.1.9.RELEASE</spring.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>miven.java</groupId>
 			<artifactId>miven-entity</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>miven.java</groupId>
+			<artifactId>miven-starter-logging</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -36,6 +60,11 @@
 			<dependency>
 				<groupId>miven.java</groupId>
 				<artifactId>miven-entity</artifactId>
+				<version>${miven.java.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>miven.java</groupId>
+				<artifactId>miven-starter-logging</artifactId>
 				<version>${miven.java.version}</version>
 			</dependency>
 		</dependencies>
