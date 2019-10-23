@@ -9,49 +9,97 @@
 	<packaging>pom</packaging>
 	<version>1.0</version>
 
-	<modules>
-		<module>spring-5.0.x-learning</module>
-		<module>spring-4.0.x-learning</module>
-		<module>spring-3.0.x-learning</module>
-		<module>spring-2.0.x-learning</module>
-		<module>spring-1.0.x-learning</module>
-        <module>spring-custom</module>
-		<module>spring-3.1.x-learning</module>
-	</modules>
+	<profiles>
+		<profile>
+			<id>spring-1.0</id>
+			<modules>
+				<module>spring-1.0.x-learning</module>
+			</modules>
+			<properties>
+				<spring.version>1.0.1</spring.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>spring-2.0</id>
+			<modules>
+				<module>spring-2.0.x-learning</module>
+			</modules>
+			<properties>
+				<spring.version>2.0.8</spring.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>spring-3.0</id>
+			<modules>
+				<module>spring-3.0.x-learning</module>
+			</modules>
+			<properties>
+				<spring.version>3.0.7.RELEASE</spring.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>spring-3.1</id>
+			<modules>
+				<module>spring-3.1.x-learning</module>
+			</modules>
+			<properties>
+				<spring.version>3.1.4.RELEASE</spring.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>spring-4.0</id>
+			<modules>
+				<module>spring-4.0.x-learning</module>
+			</modules>
+			<properties>
+				<spring.version>4.0.9.RELEASE</spring.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>spring-5.0</id>
+			<modules>
+				<module>spring-5.0.x-learning</module>
+			</modules>
+			<properties>
+				<spring.version>5.0.15.RELEASE</spring.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>spring-custom</id>
+			<modules>
+				<module>spring-custom</module>
+			</modules>
+		</profile>
+	</profiles>
 
 	<properties>
+		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-		<miven.java.version>1.0</miven.java.version>
 
-		<cglib.version>3.3.0</cglib.version>
-		<spring.version>5.1.9.RELEASE</spring.version>
+		<miven.java.version>1.0</miven.java.version>
+		<junit.version>4.12</junit.version>
+
+
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>miven.java</groupId>
-			<artifactId>miven-entity</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>miven.java</groupId>
-			<artifactId>miven-starter-logging</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
+			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
+			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aop</artifactId>
-			<version>${spring.version}</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -80,6 +128,11 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.22.1</version>
 			</plugin>
 		</plugins>
 	</build>
