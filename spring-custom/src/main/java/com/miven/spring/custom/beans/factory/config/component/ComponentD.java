@@ -1,6 +1,5 @@
 package com.miven.spring.custom.beans.factory.config.component;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,11 +8,11 @@ import org.springframework.stereotype.Component;
  * @since 1.0
  */
 @Component
-public class ComponentC {
+public class ComponentD extends AbstractLifecycle {
 
-    @Autowired
-    private ComponentD componentD;
+    public ComponentD() {
+        super("D");
+    }
 
-    @Autowired
-    private ComponentE componentE;
+
 }
