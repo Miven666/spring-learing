@@ -71,6 +71,9 @@
 			</modules>
 		</profile>
 	</profiles>
+	<modules>
+		<module>spring-custom-demo-configuration</module>
+	</modules>
 
 	<properties>
 		<java.version>1.8</java.version>
