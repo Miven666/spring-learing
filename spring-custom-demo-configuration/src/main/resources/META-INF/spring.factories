@@ -1,0 +1,2 @@
+com.miven.spring.custom.context.annotation.enable.EnableDemoAutoConfiguration=\
+  com.miven.demo.DemoAutoConfigurationA
