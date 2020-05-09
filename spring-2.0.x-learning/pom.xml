@@ -10,10 +10,5 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-2.0.x-learning</artifactId>
-    <packaging>jar</packaging>
-
-    <properties>
-        <spring.version>2.0.8</spring.version>
-    </properties>
-
+    <packaging>pom</packaging>
 </project>
