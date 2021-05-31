@@ -2,8 +2,11 @@ package com.miven.spring.custom.util;
 
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.ObjectUtils;
+import org.springframework.web.util.UriComponents;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author mingzhi.xie
@@ -17,6 +20,14 @@ public class UtilsLearning {
 
         testPathMatcher();
 
+        testUriComponents();
+    }
+
+    private static void testUriComponents() {
+        String uri = "https://www.test.com/test/123.html";
+        UriComponents uriComponents = UriComponentsBuilder.fromHttpUrl(uri).build();
+        String url = uri.replace(Objects.requireNonNull(uriComponents.getPath()), "");
+        System.out.println(url);
     }
 
     private static void testPathMatcher() {
